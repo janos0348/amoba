@@ -5,6 +5,7 @@
 package amoba;
 
 import java.awt.GridLayout;
+import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -24,7 +25,12 @@ public class amobaGUI extends javax.swing.JFrame {
 
         initComponents();
         pinNumsOrderer();
-        amobaPalya(amobaMeretJList.getSelectedIndex() + 3);
+//        for (int i = 0; i < amobaMeretJList.getComponentCount(); i++) {
+//            amobaMeretJList.getComponent(i).addMouseListener();
+//        }
+        //a probléma az hogy nem tudom az amoba palyat lefuttatni ha kiválasztok egy uj listaelemet
+        //de akoncepció megvan azzal már lehetne állítgatni a pálya méretét
+        amobaPalya(3);
         kiKezd();
         amobaClicker();
     }
@@ -51,7 +57,7 @@ public class amobaGUI extends javax.swing.JFrame {
         System.out.println(selectedIndex);
         for (int i = 0; i < (selectedIndex * selectedIndex); i++) {
             amobaJPanel.setLayout(new GridLayout(selectedIndex, selectedIndex));
-            amobaJPanel.add(new JButton("q"));
+            amobaJPanel.add(new JButton ());
 
         }
     }
