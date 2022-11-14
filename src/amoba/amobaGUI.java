@@ -22,7 +22,7 @@ public class amobaGUI extends javax.swing.JFrame {
         initComponents();
         pinNumsOrderer();
         amobaFeltolt();
-        amobaPalya(amobaMeretJList.getSelectedIndex());
+        amobaPalya(amobaMeretJList.getSelectedIndex()+3);
     }
 
     private void pinNumsOrderer() {
@@ -39,8 +39,8 @@ public class amobaGUI extends javax.swing.JFrame {
 
     private void amobaPalya(int selectedIndex) {
         System.out.println(selectedIndex);
-        for (int i = 0; i < (selectedIndex + 3 * selectedIndex + 3); i++) {
-
+        for (int i = 0; i < (selectedIndex* selectedIndex); i++) {
+            
         }
     }
 
