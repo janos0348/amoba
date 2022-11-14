@@ -31,6 +31,7 @@ public class amobaGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         pinNumsJPanel = new javax.swing.JPanel();
@@ -39,8 +40,12 @@ public class amobaGUI extends javax.swing.JFrame {
         kodJLabel = new javax.swing.JLabel();
         passJTextField = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        amobaJPanel = new javax.swing.JPanel();
+        jatekBeallitasJPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        meretJList = new javax.swing.JList<>();
+        xJRadioButton = new javax.swing.JRadioButton();
+        oJRadioButton = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -121,30 +126,55 @@ public class amobaGUI extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Bejelentkezés", jPanel1);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Amőba"));
+        amobaJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Amőba"));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout amobaJPanelLayout = new javax.swing.GroupLayout(amobaJPanel);
+        amobaJPanel.setLayout(amobaJPanelLayout);
+        amobaJPanelLayout.setHorizontalGroup(
+            amobaJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 159, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        amobaJPanelLayout.setVerticalGroup(
+            amobaJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 161, Short.MAX_VALUE)
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Beállítás"));
+        jatekBeallitasJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Beállítás"));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 158, Short.MAX_VALUE)
+        meretJList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "3x3", "4x4", "5x5", "6x6", "7x7" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(meretJList);
+
+        buttonGroup1.add(xJRadioButton);
+        xJRadioButton.setText("\"X\" kezd");
+
+        buttonGroup1.add(oJRadioButton);
+        oJRadioButton.setText("\"O\" kezd");
+
+        javax.swing.GroupLayout jatekBeallitasJPanelLayout = new javax.swing.GroupLayout(jatekBeallitasJPanel);
+        jatekBeallitasJPanel.setLayout(jatekBeallitasJPanelLayout);
+        jatekBeallitasJPanelLayout.setHorizontalGroup(
+            jatekBeallitasJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jatekBeallitasJPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jatekBeallitasJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(xJRadioButton)
+                    .addComponent(oJRadioButton))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        jatekBeallitasJPanelLayout.setVerticalGroup(
+            jatekBeallitasJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jatekBeallitasJPanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(xJRadioButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(oJRadioButton)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -153,9 +183,9 @@ public class amobaGUI extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(amobaJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addComponent(jatekBeallitasJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44))
         );
         jPanel2Layout.setVerticalGroup(
@@ -163,8 +193,8 @@ public class amobaGUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jatekBeallitasJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(amobaJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(122, Short.MAX_VALUE))
         );
 
@@ -237,18 +267,23 @@ public class amobaGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel amobaJPanel;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel jatekBeallitasJPanel;
     private javax.swing.JCheckBox keverJCheckBox;
     private javax.swing.JLabel kodJLabel;
+    private javax.swing.JList<String> meretJList;
+    private javax.swing.JRadioButton oJRadioButton;
     private javax.swing.JTextField passJTextField;
     private javax.swing.JPanel pinNumsJPanel;
     private javax.swing.JPanel pinSpaceJPanel;
+    private javax.swing.JRadioButton xJRadioButton;
     // End of variables declaration//GEN-END:variables
 }
