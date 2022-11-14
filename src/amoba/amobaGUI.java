@@ -147,17 +147,7 @@ public class amobaGUI extends javax.swing.JFrame {
         jTabbedPane1.addTab("Bejelentkezés", jPanel1);
 
         amobaJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Amőba"));
-
-        javax.swing.GroupLayout amobaJPanelLayout = new javax.swing.GroupLayout(amobaJPanel);
-        amobaJPanel.setLayout(amobaJPanelLayout);
-        amobaJPanelLayout.setHorizontalGroup(
-            amobaJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 199, Short.MAX_VALUE)
-        );
-        amobaJPanelLayout.setVerticalGroup(
-            amobaJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 161, Short.MAX_VALUE)
-        );
+        amobaJPanel.setLayout(new java.awt.GridLayout());
 
         jatekBeallitasJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Beállítás"));
 
@@ -203,8 +193,8 @@ public class amobaGUI extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(amobaJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(amobaJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(jatekBeallitasJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44))
         );
@@ -215,7 +205,7 @@ public class amobaGUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jatekBeallitasJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(amobaJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Játék", jPanel2);
