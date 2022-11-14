@@ -4,7 +4,9 @@
  */
 package amoba;
 
+import java.awt.GridLayout;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 
 /**
  *
@@ -21,16 +23,23 @@ public class amobaGUI extends javax.swing.JFrame {
 
         initComponents();
         pinNumsOrderer();
-        amobaFeltolt();
-        amobaPalya(amobaMeretJList.getSelectedIndex()+3);
+        amobaPalya(amobaMeretJList.getSelectedIndex() + 3);
+        kiKezd();
+        amobaClicker();
+    }
+
+    private void kiKezd() {
+    }
+
+    private void amobaClicker() {
+
     }
 
     private void pinNumsOrderer() {
-
         System.out.println("jo");
         for (int i = 0; i < 10; i++) {
-            gomb.setText(String.valueOf(i));
-            pinNumsJPanel.add(gomb);
+            pinNumsJPanel.setLayout(new GridLayout(4, 3));
+            pinNumsJPanel.add(new JButton(String.valueOf(i)));
         }
 
         pinNumsJPanel.revalidate();
@@ -39,14 +48,13 @@ public class amobaGUI extends javax.swing.JFrame {
 
     private void amobaPalya(int selectedIndex) {
         System.out.println(selectedIndex);
-        for (int i = 0; i < (selectedIndex* selectedIndex); i++) {
-            
+        for (int i = 0; i < (selectedIndex * selectedIndex); i++) {
+            amobaJPanel.setLayout(new GridLayout(selectedIndex, selectedIndex));
+            pinNumsJPanel.add(new JButton("q"));
+
         }
     }
 
-    private void amobaFeltolt() {
-
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -86,7 +94,7 @@ public class amobaGUI extends javax.swing.JFrame {
 
         pinNumsJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Pin kód"));
         pinNumsJPanel.setToolTipText("");
-        pinNumsJPanel.setLayout(new java.awt.GridLayout());
+        pinNumsJPanel.setLayout(new java.awt.BorderLayout());
 
         pinSpaceJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Beállítás"));
 
@@ -147,7 +155,8 @@ public class amobaGUI extends javax.swing.JFrame {
         jTabbedPane1.addTab("Bejelentkezés", jPanel1);
 
         amobaJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Amőba"));
-        amobaJPanel.setLayout(new java.awt.GridLayout());
+        amobaJPanel.setAutoscrolls(true);
+        amobaJPanel.setLayout(new java.awt.BorderLayout(1, 1));
 
         jatekBeallitasJPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Beállítás"));
 
@@ -193,8 +202,8 @@ public class amobaGUI extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(amobaJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addComponent(amobaJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addComponent(jatekBeallitasJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44))
         );
@@ -203,8 +212,8 @@ public class amobaGUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jatekBeallitasJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(amobaJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(amobaJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jatekBeallitasJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
 
