@@ -18,6 +18,7 @@ public class amobaGUI extends javax.swing.JFrame {
      * Creates new form amobaGUI
      */
     static JButton gomb = new JButton();
+    static int pinKod  = 1234;
 
     public amobaGUI() {
 
@@ -50,7 +51,7 @@ public class amobaGUI extends javax.swing.JFrame {
         System.out.println(selectedIndex);
         for (int i = 0; i < (selectedIndex * selectedIndex); i++) {
             amobaJPanel.setLayout(new GridLayout(selectedIndex, selectedIndex));
-            pinNumsJPanel.add(new JButton("q"));
+            amobaJPanel.add(new JButton("q"));
 
         }
     }
