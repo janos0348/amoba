@@ -11,41 +11,43 @@ import javax.swing.JButton;
  * @author katona.janos
  */
 public class amobaGUI extends javax.swing.JFrame {
+
     /**
      * Creates new form amobaGUI
      */
     static JButton gomb = new JButton();
+
     public amobaGUI() {
-        
+
         initComponents();
         pinNumsOrderer();
         amobaFeltolt();
         amobaPalya(amobaMeretJList.getSelectedIndex());
     }
+
     private void pinNumsOrderer() {
-        for (int i = 1; i < 10; i++) {
-            
-            pinNumsJPanel.add(gomb);
+
+        System.out.println("jo");
+        for (int i = 0; i < 10; i++) {
             gomb.setText(String.valueOf(i));
-            
-            System.out.println("jo");
+            pinNumsJPanel.add(gomb);
         }
 
-        
-          pinNumsJPanel.revalidate();
-          pinNumsJPanel.repaint();
+        pinNumsJPanel.revalidate();
+        pinNumsJPanel.repaint();
     }
-           private void amobaPalya(int selectedIndex) {
-               System.out.println(selectedIndex);
-               for (int i = 0; i < (selectedIndex+3*selectedIndex+3); i++) {
-                   
-               }
+
+    private void amobaPalya(int selectedIndex) {
+        System.out.println(selectedIndex);
+        for (int i = 0; i < (selectedIndex + 3 * selectedIndex + 3); i++) {
+
+        }
     }
-               private void amobaFeltolt() {
-                   
-               }
-           
-    
+
+    private void amobaFeltolt() {
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -127,7 +129,7 @@ public class amobaGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addComponent(pinNumsJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pinNumsJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
                 .addGap(36, 36, 36)
                 .addComponent(pinSpaceJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(44, Short.MAX_VALUE))
@@ -150,7 +152,7 @@ public class amobaGUI extends javax.swing.JFrame {
         amobaJPanel.setLayout(amobaJPanelLayout);
         amobaJPanelLayout.setHorizontalGroup(
             amobaJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 159, Short.MAX_VALUE)
+            .addGap(0, 199, Short.MAX_VALUE)
         );
         amobaJPanelLayout.setVerticalGroup(
             amobaJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +204,7 @@ public class amobaGUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(amobaJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jatekBeallitasJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44))
         );
@@ -332,10 +334,5 @@ public class amobaGUI extends javax.swing.JFrame {
     private javax.swing.JPanel pinSpaceJPanel;
     private javax.swing.JRadioButton xJRadioButton;
     // End of variables declaration//GEN-END:variables
-
-
-
-
-
 
 }
