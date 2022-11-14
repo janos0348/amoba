@@ -19,6 +19,7 @@ public class amobaGUI extends javax.swing.JFrame {
         
         initComponents();
         pinNumsOrderer();
+        amobaFeltolt();
         amobaPalya(amobaMeretJList.getSelectedIndex());
     }
     private void pinNumsOrderer() {
@@ -39,7 +40,10 @@ public class amobaGUI extends javax.swing.JFrame {
                for (int i = 0; i < (selectedIndex+3*selectedIndex+3); i++) {
                    
                }
-           }
+    }
+               private void amobaFeltolt() {
+                   
+               }
            
     
     /**
@@ -297,6 +301,8 @@ public class amobaGUI extends javax.swing.JFrame {
     private javax.swing.JPanel pinSpaceJPanel;
     private javax.swing.JRadioButton xJRadioButton;
     // End of variables declaration//GEN-END:variables
+
+
 
 
 
